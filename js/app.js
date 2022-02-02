@@ -15,6 +15,11 @@ let adjective = ['a funny', 'a scary', 'a goofy', 'a slimy', 'a barking', 'a fat
 let thing = ['goat', 'monkey', 'fish', 'cow', 'frog', 'bug', 'worm'];
 let place = ['on the moon', 'on the chair', 'in my spaghetti', 'in my soup', 'on the grass', 'in my shoes'];
 
+//  This will loop over every element in the subject array and console log.
+subject.forEach($item => {
+	console.log($item);
+})
+
 /* Functions
 -------------------------------------------------- */
 function speakNow(string) {
