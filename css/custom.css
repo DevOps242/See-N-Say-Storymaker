@@ -1,0 +1,66 @@
+/*
+*  Custom CSS
+*/
+
+body{
+	/* Fonts?  */
+	background-color: lightgray !important;
+}
+
+h3{
+	 background-color: gray;
+	 font-size: 70px;
+	 justify-content: center;
+	 text-align: center;
+	 padding-top: 10px;
+	 padding-bottom: 10px;
+}
+
+/* Images  */
+img{
+	width:100%;
+	max-height:230px;
+	max-width: 220px;
+}
+
+.mainContent{
+	min-width:100%;
+	display: grid;
+	grid-template-columns: 75% 25%;
+}
+
+.wordLists{
+	/*includes:
+			word Lists
+			affects right collumn indirectly
+	 */
+	 display: grid;
+	 grid-template-columns: 20% 20% 20% 20% 20%;
+	 grid-template-rows: 350px 45px;
+	 padding: 2%;
+}
+
+button{
+	padding-right: 10%;
+	text-align: center;
+	justify-content: center;
+}
+
+.rowTitle{
+	/*Word List Titles*/
+
+	font-size: 40px;
+	font-style: italic;
+}
+
+.row{
+	background-color: white;
+	font-size: 20px;
+	padding: 5px;
+}
+
+.subIMG{
+	height: 50px;
+	width: 50px;
+
+}
