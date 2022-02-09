@@ -54,6 +54,7 @@ h1{
 
 img{
 	height: 150px;
+	background-color:transparent;
 }
 .button-container{
 	display: flex;
