@@ -174,7 +174,7 @@ function checkImg(){
 			subjectImg_2.src="assets/images/verb/dislike.jpg";
 		}
 		if(currentLocation == 5){
-			subjectImg_2.src="assets/images/verb/turkey.png";
+			subjectImg_2.src="assets/images/verb/kissed.jpg";
 		}
 
 		// Adjective Images
