@@ -43,7 +43,6 @@ function speakNow(string) {
 	synth.speak(utterThis);
 }
 
-
 /* Event Listeners
 -------------------------------------------------- */
 // Onclick handler for the button that speaks the text contained in the above var textToSpeak
@@ -51,38 +50,37 @@ saveButton.onclick = function() {
 	//save current phrase fragment
 		//detect what collumn then store into variable
     if(currentCol == 1){
-      ourSubject = subject[currentLocation];
-      speakNow(subject[currentLocation]);
+      ourSubject = subject[currentLocation-1];
+      speakNow("Subject Saved");
     }
     if(currentCol == 2){
-      ourVerb = verb[currentLocation];
-      speakNow(verb[currentLocation]);
+      ourVerb = verb[currentLocation-1];
+      speakNow("Verb Saved");
     }
     if(currentCol == 3){
-      ourAdjective = adjective[currentLocation];
-      speakNow(adjective[currentLocation]);
+      ourAdjective = adjective[currentLocation-1];
+      speakNow("Adjective Saved");
     }
     if(currentCol == 4){
-      ourThing = thing[currentLocation];
-      speakNow(thing[currentLocation]);
+      ourThing = thing[currentLocation-1];
+      speakNow("Thing Saved");
     }
     if(currentCol == 5){
-      ourPlace = place[currentLocation];
-      speakNow(place[currentLocation]);
+      ourPlace = place[currentLocation-1];
+      speakNow("Place Saved");
     }
-    currentCol = currentCol + 1;
+	if(currentCol == 0){
+		speakNow("Let's build a story.");
+	}
+	currentCol = currentCol + 1;
 	currentLocation = 0;
+    
 }
 
 nextButton.onclick = function() {
 	//go to next in list
   //come back to this
   checkImg();
-	if(currentLocation < 5){
-    	currentLocation = currentLocation + 1;
-  	}else{
-    	currentLocation = 0;
-  	}
 
   	if(currentCol == 1){
     	ourSubject = subject[currentLocation];
@@ -105,6 +103,11 @@ nextButton.onclick = function() {
 		ourPlace = place[currentLocation];
 		speakNow(place[currentLocation]);
 	}
+	if(currentLocation < 5){
+    	currentLocation = currentLocation + 1;
+  	}else{
+    	currentLocation = 0;
+  	}
 }
 
 playButton.onclick = function() {
@@ -118,35 +121,39 @@ playButton.onclick = function() {
   }
 
 }
+
 resetButton.onclick = function() {
   speakNow("reset");
   currentCol = 0;
   currentLocation = 0;
-
+  resetImg();
 }
 
-//this is for subject only
 function checkImg(){
 
 	// Subject Images
 	if (currentCol == 1) {
 		if(currentLocation == 0){
-			subjectImg.src="assets/images/subject/mother.png";
+			subjectImg.src="assets/images/subject/turkey.png";
 		}
 		if(currentLocation == 1){
-			subjectImg.src="assets/images/subject/father.jpg";
+			subjectImg.src="assets/images/subject/mother.png";
+			
 		}
 		if(currentLocation == 2){
-			subjectImg.src="assets/images/subject/dog.jpg";
+			subjectImg.src="assets/images/subject/father.jpg";
+			
 		}
 		if(currentLocation == 3){
-			subjectImg.src="assets/images/subject/teacher.jpg";
+			subjectImg.src="assets/images/subject/dog.jpg";
+			
 		}
 		if(currentLocation == 4){
-			subjectImg.src="assets/images/subject/elephant.jpg";
+			subjectImg.src="assets/images/subject/teacher.jpg";
+			
 		}
 		if(currentLocation == 5){
-			subjectImg.src="assets/images/subject/turkey.png";
+			subjectImg.src="assets/images/subject/elephant.jpg";
 		}
 
 		// Verb Images
@@ -234,47 +241,14 @@ function checkImg(){
 		}
 	} 
 	
-
 }
 
-/* very complex
-const frameworks = [
-	{
-	  name: "angular",
-	  image: "generic-image-placeholder.png"
-	},
-	{
-	  name: "ember",
-	  image: "generic-image-placeholder.png"
-	},
-	{
-	  name: "react",
-	  image: "generic-image-placeholder.png"
-	},
-	{
-	  name: "vue",
-	  image: "generic-image-placeholder.png"
-	}
-  ];
+function resetImg(){
 
-
-// This function will generate a card item for each item in the array which is passed, argument 1 (array of objects), argument 2 (ID on the div you want it placed)
-const generateCardCollection = (data, divID) => {
-	data.forEach( data => {
-		const card = `<div class="row mb-3">
-					  <div class="card" style="width: 16rem;">
-						  <img src="./assets/images/${data.image}" class="card-img-top" alt="placeholder-image" height="100">
-						  <div class="card-body">
-							  <p class="card-text">${data.name}</p>
-						  </div>
-					  </div>
-				  </div>`
-
-	  const ele = document.createElement('div');
-	  ele.innerHTML = card;
-	  document.getElementById(divID).appendChild(ele.firstChild);
-	})
+	//Reset images
+	subjectImg.src="assets/images/subject/turkey.png";
+	subjectImg_2.src="assets/images/verb/sat-on.png";
+	subjectImg_3.src="assets/images/adjective/a-funny.png";
+	subjectImg_4.src="assets/images/thing/a-goat.jpg";
+	subjectImg_5.src="assets/images/place/on-the-moon.png";
 }
-
-generateCardCollection(frameworks, "card-collection");
-*/

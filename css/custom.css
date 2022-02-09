@@ -2,65 +2,79 @@
 *  Custom CSS
 */
 
+/**Font Import**/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Poppins&family=Quicksand:wght@500&family=Righteous&display=swap');
+
 body{
-	/* Fonts?  */
-	background-color: lightgray !important;
+	display: flex;
+	flex-direction: column;
+	font-family: 'Quicksand', sans-serif;
+	background-color: #98DFAF ;
+	align-content: center;
 }
-
-h3{
-	 background-color: gray;
-	 font-size: 70px;
-	 justify-content: center;
-	 text-align: center;
-	 padding-top: 10px;
-	 padding-bottom: 10px;
-}
-
-/* Images  */
-img{
-	width:100%;
-	max-height:230px;
-	max-width: 220px;
-}
-
-.mainContent{
-	min-width:100%;
-	display: grid;
-	grid-template-columns: 75% 25%;
-}
-
-.wordLists{
-	/*includes:
-			word Lists
-			affects right collumn indirectly
-	 */
-	 display: grid;
-	 grid-template-columns: 20% 20% 20% 20% 20%;
-	 grid-template-rows: 350px 45px;
-	 padding: 2%;
-}
-
-button{
-	padding-right: 10%;
+.main-title{
 	text-align: center;
-	justify-content: center;
-}
+	vertical-align: middle;
+	height: 90px;
 
+}
+h1{
+	color: #414288;
+	font-size: 50px;
+}
+.image-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	background-color: #ffff;
+	border-radius: 8px;
+	margin: 15px;
+	padding: 1%;
+}
 .rowTitle{
-	/*Word List Titles*/
-
 	font-size: 40px;
+	color: #682D63;
 	font-style: italic;
+	font-weight: bolder;
+}
+.mainContent{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 2%;
+	background-color: #DEEFB7 ;
+	margin: 15px;
+	border: solid;
+	border-color: #414288;
+	border-radius: 8px;
+	font-size: 30px;
+	
 }
 
-.row{
-	background-color: white;
-	font-size: 20px;
-	padding: 5px;
+img{
+	height: 150px;
 }
-
-.subIMG{
-	height: 50px;
-	width: 50px;
-
+.button-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 2%;
+}
+button{
+	height: 60px;
+	width: 130px;
+	font-size: 25px;
+	background-color: #8d618a;
+	border-style:outset;
+	border-radius: 8px;
+	
+}
+.instructions{
+	display: flex;
+	flex-direction: column;
+	color: #414288;
+	text-align: center;
+	padding: 2%;
+	
 }
