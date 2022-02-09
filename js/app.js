@@ -7,6 +7,7 @@ var synth = window.speechSynthesis;
 // Learn more about SpeechSynthesis.speak() at https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speak
 var textToSpeak = 'This is the text string that you will generate with your script';
 <<<<<<< HEAD
+<<<<<<< HEAD
 var speakButton = document.querySelector('button');
 
 // Five Arrays for Story Button Words
@@ -16,6 +17,8 @@ let adjective = ['a funny', 'a scary', 'a goofy', 'a slimy', 'a barking', 'a fat
 let thing = ['goat', 'monkey', 'fish', 'cow', 'frog', 'bug', 'worm'];
 let place = ['on the moon', 'on the chair', 'in my spaghetti', 'in my soup', 'on the grass', 'in my shoes'];
 =======
+=======
+>>>>>>> aidan-feature
 var resetButton = document.getElementById("resetButton");
 var saveButton = document.getElementById("saveButton");
 var playButton = document.getElementById("playButton");
@@ -43,7 +46,10 @@ let place = ['on the moon ', 'on the chair ', 'in my spaghetti ', 'in my soup ',
 subject.forEach($item => {
 	console.log($item);
 })
+<<<<<<< HEAD
 >>>>>>> 8ae13fc (update: Aidan js function and images selection)
+=======
+>>>>>>> aidan-feature
 
 /* Functions
 -------------------------------------------------- */
@@ -56,6 +62,7 @@ function speakNow(string) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Event Listeners
 -------------------------------------------------- */
 // Onclick handler for the button that speaks the text contained in the above var textToSpeak
@@ -66,6 +73,8 @@ speakButton.onclick = function() {
 
 =======
 >>>>>>> c5db6eb (gt)
+=======
+>>>>>>> aidan-feature
 /* Event Listeners
 -------------------------------------------------- */
 // Onclick handler for the button that speaks the text contained in the above var textToSpeak
@@ -276,9 +285,12 @@ function resetImg(){
 	subjectImg_5.src="assets/images/place/on-the-moon.png";
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 generateCardCollection(frameworks, "card-collection");
 */
 >>>>>>> 8ae13fc (update: Aidan js function and images selection)
 =======
 >>>>>>> c5db6eb (gt)
+=======
+>>>>>>> aidan-feature
