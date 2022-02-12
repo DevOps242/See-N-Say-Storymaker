@@ -6,14 +6,18 @@
 var synth = window.speechSynthesis;
 // Learn more about SpeechSynthesis.speak() at https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speak
 var textToSpeak = 'This is the text string that you will generate with your script';
+
+/* Variables to get html elements by id */
 var resetButton = document.getElementById("resetButton");
 var saveButton = document.getElementById("saveButton");
 var playButton = document.getElementById("playButton");
 var nextButton = document.getElementById("nextButton");
+var randomButton = document.getElementById("randomButton");
 
 var subjectImg = document.getElementById("subjectImg");
 var subjectImg_2 = document.getElementById("subjectImg_2");
 
+/*Variables to store word selection */
 var ourSubject = "";
 var ourVerb = "";
 var ourAdjective = "";
@@ -27,7 +31,7 @@ let subject = ['The turkey ', 'Mom ', 'Dad ', 'The Dog ', 'My teacher ', 'The el
 let verb = ['sat on ', 'ate ', 'danced with ', 'saw ', 'doesn\'t like ', 'kissed ' ];
 let adjective = ['a funny ', 'a scary ', 'a goofy ', 'a slimy ', 'a barking ', 'a fat '];
 let thing = ['goat ', 'monkey ', 'fish ', 'cow ', 'frog ', 'bug '];
-let place = ['on the moon ', 'on the chair ', 'in my spaghetti ', 'in my soup ', 'on the grass ', 'in my shoes '];
+let place = ['on the moon ', 'on a chair ', 'in my spaghetti ', 'in my soup ', 'on the grass ', 'in my shoes '];
 
 //  This will loop over every element in the subject array and console log.
 subject.forEach($item => {
@@ -77,9 +81,10 @@ saveButton.onclick = function() {
     
 }
 
+/*Speak word at current column and current location within column then
+increment the column and reset current location to zero */
 nextButton.onclick = function() {
-	//go to next in list
-  //come back to this
+
   checkImg();
 
   	if(currentCol == 1){
@@ -110,6 +115,7 @@ nextButton.onclick = function() {
   	}
 }
 
+/*Speaks the word currently stored in each word selection variable*/
 playButton.onclick = function() {
 	//play saved story
   if(currentCol > 5){
@@ -122,6 +128,7 @@ playButton.onclick = function() {
 
 }
 
+/*Reset column and current location in column to zero and return images to first position */
 resetButton.onclick = function() {
   speakNow("reset");
   currentCol = 0;
@@ -129,6 +136,7 @@ resetButton.onclick = function() {
   resetImg();
 }
 
+/*Function to display correct picture associated with each spoken word selection */
 function checkImg(){
 
 	// Subject Images
@@ -243,6 +251,7 @@ function checkImg(){
 	
 }
 
+/*Reset images back to first location for every column */
 function resetImg(){
 
 	//Reset images
@@ -252,3 +261,20 @@ function resetImg(){
 	subjectImg_4.src="assets/images/thing/a-goat.jpg";
 	subjectImg_5.src="assets/images/place/on-the-moon.png";
 }
+
+/*Generate a random story by selecting a random word from each category*/
+randomButton.onclick = function (){
+
+	
+	x = Math.floor((Math.random()*5)+ 0);
+	y = Math.floor((Math.random()*5)+ 0);
+	z = Math.floor((Math.random()*5)+ 0);
+	a = Math.floor((Math.random()*5)+ 0);
+	b = Math.floor((Math.random()*5)+ 0);
+
+	randomStory = subject[x] + verb[y] + adjective[z] + thing[a] + place[b]; 
+	speakNow(randomStory);
+
+
+}
+
