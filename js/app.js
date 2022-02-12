@@ -25,6 +25,7 @@ var ourThing = "";
 var ourPlace = "";
 var currentLocation = 0;
 var currentCol = 1;
+var newPhrase;
 
 // Five Arrays for Story Button Words
 let subject = ['The turkey ', 'Mom ', 'Dad ', 'The Dog ', 'My teacher ', 'The elephant '];
@@ -52,26 +53,66 @@ function speakNow(string) {
 // Onclick handler for the button that speaks the text contained in the above var textToSpeak
 saveButton.onclick = function() {
 	//save current phrase fragment
-		//detect what collumn then store into variable
+		//detect what column then store into variable
     if(currentCol == 1){
-      ourSubject = subject[currentLocation-1];
-      speakNow("Subject Saved");
+		if(currentLocation == 0)
+		{
+			ourSubject = subject[currentLocation+5];
+      		speakNow("Subject Saved");
+		}
+		else
+		{
+			ourSubject = subject[currentLocation-1];
+      		speakNow("Subject Saved");
+		}
     }
     if(currentCol == 2){
-      ourVerb = verb[currentLocation-1];
-      speakNow("Verb Saved");
+		if(currentLocation == 0)
+		{
+			ourVerb = verb[currentLocation+5];
+      		speakNow("Verb Saved");
+		}
+		else
+		{
+			ourVerb = verb[currentLocation-1];
+      		speakNow("Verb Saved");
+		}  
     }
     if(currentCol == 3){
-      ourAdjective = adjective[currentLocation-1];
-      speakNow("Adjective Saved");
+		if(currentLocation == 0)
+		{
+			ourAdjective = adjective[currentLocation+5];
+			speakNow("Adjective Saved");
+		}
+		else
+		{
+			ourAdjective = adjective[currentLocation-1];
+			speakNow("Adjective Saved");
+		}
     }
     if(currentCol == 4){
-      ourThing = thing[currentLocation-1];
-      speakNow("Thing Saved");
+		if(currentLocation == 0)
+		{
+			ourThing = thing[currentLocation+5];
+			speakNow("Thing Saved");
+		}
+		else
+		{
+			ourThing = thing[currentLocation-1];
+			speakNow("Thing Saved");
+		}
     }
     if(currentCol == 5){
-      ourPlace = place[currentLocation-1];
-      speakNow("Place Saved");
+		if(currentLocation == 0)
+		{
+			ourPlace = place[currentLocation+5];
+			speakNow("Place Saved");
+		}
+		else
+		{
+			ourPlace = place[currentLocation-1];
+			speakNow("Place Saved");
+		}
     }
 	if(currentCol == 0){
 		speakNow("Let's build a story.");
@@ -89,7 +130,6 @@ nextButton.onclick = function() {
 
   	if(currentCol == 1){
     	ourSubject = subject[currentLocation];
-
     	speakNow(subject[currentLocation]);
   	}
   	if(currentCol == 2){
@@ -120,7 +160,7 @@ playButton.onclick = function() {
 	//play saved story
   if(currentCol > 5){
     newPhrase = ourSubject + ourVerb + ourAdjective + ourThing + ourPlace;
-    speakNow(newPhrase)
+    speakNow(newPhrase);
 
   }else{
     speakNow("Story not ready");
@@ -182,7 +222,7 @@ function checkImg(){
 			subjectImg_2.src="assets/images/verb/dislike.jpg";
 		}
 		if(currentLocation == 5){
-			subjectImg_2.src="assets/images/verb/kissing.png";
+			subjectImg_2.src="assets/images/verb/kissing.jpg";
 		}
 
 		// Adjective Images
@@ -316,7 +356,7 @@ randomButton.onclick = function (){
 		subjectImg_2.src="assets/images/verb/dislike.jpg";
 	}
 	if(y == 5){
-		subjectImg_2.src="assets/images/verb/kissing.png";
+		subjectImg_2.src="assets/images/verb/kissing.jpg";
 	}
 
 	// Adjective Images
@@ -379,9 +419,7 @@ randomButton.onclick = function (){
 		subjectImg_5.src="assets/images/place/in-my-shoes.png";
 	}
 	 
-	
 	speakNow(randomStory);
-
 
 }
 
