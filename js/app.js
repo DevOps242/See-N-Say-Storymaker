@@ -273,6 +273,113 @@ randomButton.onclick = function (){
 	b = Math.floor((Math.random()*5)+ 0);
 
 	randomStory = subject[x] + verb[y] + adjective[z] + thing[a] + place[b]; 
+
+	//Set images according to random story 
+	// Subject Images
+	if (x == 0) {
+		subjectImg.src="assets/images/subject/turkey.png";
+	}
+	if(x == 1){
+		subjectImg.src="assets/images/subject/mother.png";
+		
+	}
+	if(x == 2){
+		subjectImg.src="assets/images/subject/father.jpg";
+		
+	}
+	if(x == 3){
+		subjectImg.src="assets/images/subject/dog.jpg";
+		
+	}
+	if(x == 4){
+		subjectImg.src="assets/images/subject/teacher.jpg";
+		
+	}
+	if(x == 5){
+		subjectImg.src="assets/images/subject/elephant.jpg";
+	}
+
+	// Verb Images
+	if(y == 0){
+		subjectImg_2.src="assets/images/verb/sat-on.png";
+	}
+	if(y == 1){
+		subjectImg_2.src="assets/images/verb/eat.png";
+	}
+	if(y == 2){
+		subjectImg_2.src="assets/images/verb/dancing.jpg";
+	}
+	if(y == 3){
+		subjectImg_2.src="assets/images/verb/saw.png";
+	}
+	if(y == 4){
+		subjectImg_2.src="assets/images/verb/dislike.jpg";
+	}
+	if(y == 5){
+		subjectImg_2.src="assets/images/verb/kissing.png";
+	}
+
+	// Adjective Images
+	if(z == 0){
+		subjectImg_3.src="assets/images/adjective/a-funny.png";
+	}
+	if(z == 1){
+		subjectImg_3.src="assets/images/adjective/a-scary.jpg";
+	}
+	if(z == 2){
+		subjectImg_3.src="assets/images/adjective/a-goofy.png";
+	}
+	if(z == 3){
+		subjectImg_3.src="assets/images/adjective/a-slimy.jpg";
+	}
+	if(z == 4){
+		subjectImg_3.src="assets/images/adjective/a-barking.jpg";
+	}
+	if(z == 5){
+		subjectImg_3.src="assets/images/adjective/a-fat.png";
+	}
+
+	// Thing Images
+	if(a == 0){
+		subjectImg_4.src="assets/images/thing/a-goat.jpg";
+	}
+	if(a == 1){
+		subjectImg_4.src="assets/images/thing/a-monkey.jpg";
+	}
+	if(a == 2){
+		subjectImg_4.src="assets/images/thing/a-fish.png";
+	}
+	if(a == 3){
+		subjectImg_4.src="assets/images/thing/a-cow.jpg";
+	}
+	if(a == 4){
+		subjectImg_4.src="assets/images/thing/a-frog.png";
+	}
+	if(a == 5){
+		subjectImg_4.src="assets/images/thing/a-bug.jpg";
+	}
+
+	// Place Images
+	if(b == 0){
+		subjectImg_5.src="assets/images/place/on-the-moon.png";
+	}
+	if(b== 1){
+		subjectImg_5.src="assets/images/place/on-a-chair.png";
+	}
+	if(b == 2){
+		subjectImg_5.src="assets/images/place/in-my-spaghetti.png";
+	}
+	if(b == 3){
+		subjectImg_5.src="assets/images/place/in-my-soup.png";
+	}
+	if(b == 4){
+		subjectImg_5.src="assets/images/place/on-the-grass.png";
+	}
+	if(b == 5){
+		subjectImg_5.src="assets/images/place/in-my-shoes.png";
+	}
+	 
+	
 	speakNow(randomStory);
 
 
