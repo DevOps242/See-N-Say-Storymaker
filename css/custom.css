@@ -69,7 +69,11 @@ button{
 	background-color: #8d618a;
 	border-style:outset;
 	border-radius: 8px;
-	
+}
+
+button:hover{
+	cursor: pointer;
+	opacity: .7;
 }
 .instructions{
 	display: flex;
