@@ -65,11 +65,15 @@ img{
 button{
 	height: 60px;
 	width: 130px;
-	font-size: 25px;
+	font-size: 22px;
 	background-color: #8d618a;
 	border-style:outset;
 	border-radius: 8px;
-	
+}
+
+button:hover{
+	cursor: pointer;
+	opacity: .7;
 }
 .instructions{
 	display: flex;
